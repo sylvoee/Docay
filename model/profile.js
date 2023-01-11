@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
         // _id : {type:mongoose.Schema.Types.ObjectId},
     // name: {type: String, lowercase: true}
   DOB : Date,
-  Specialties: String,
+  specialties: String,
   nationality: String,
   maritalStatus: String,
   educationalBackground:String,
