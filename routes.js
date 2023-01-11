@@ -1,6 +1,8 @@
 // importing controllers
 const indexController = require('./controller/indexController');
 const userController = require('./controller/userController');
+const registerPatientController = require('./controller/patientRegController');
+const patientReportController = require('./controller/patientReportController');
 
 
 
@@ -22,6 +24,20 @@ router.post('/confirm-password', confirmPassword);
 
 router.get('/change-password', changePassword);
 router.post('/change-password', changePassword);
+
+
+// register patient
+router.get('/register-patient', registerPatient);
+router.post('/register-patient', registerPatient);
+
+// pateint report
+router.get('/patient-report', patientReport);
+router.post('/patient-report', patientReport);
+
+router.post('/search', patientSearch);
+
+
+
 
 
 
