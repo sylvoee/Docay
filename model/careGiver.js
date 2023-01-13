@@ -1,19 +1,21 @@
 const mongoose = require('mongoose');
 
-    const doctorProfileSchema = new mongoose.Schema({
+    const careGiverProfileSchema = new mongoose.Schema({
         // _id : {type:mongoose.Schema.Types.ObjectId},
     // name: {type: String, lowercase: true}
-  DOB : Date,
+
   specialties: String,
   nationality: String,
   maritalStatus: String,
   educationalBackground:String,
   sex:String,
+  summaryStatement: String ,
 
   institute:String,
   portfolioLink:String,
   linkedlnLink:String,
-  doctorProfileImage: String,
+  profileImage: String,
+  DOB: String,
   
   qualification:String,
   workExperience: Array,
@@ -29,6 +31,6 @@ const mongoose = require('mongoose');
 
 
 
-const doctorProfileModel = mongoose.model('doctorProfile', doctorProfileSchema);
-module.exports = doctorProfileModel;
+const careGiverProfileModel = mongoose.model('careGiverProfile', careGiverProfileSchema);
+module.exports = careGiverProfileModel;
 

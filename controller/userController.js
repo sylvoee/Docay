@@ -103,7 +103,7 @@ module.exports = signUp = (req, res)=>{
     // hashing password
     let hasPassword = bcrypt.hashSync(password, salt);
 
-    let aRecord = {name, email, password: hasPassword, status:'Sylvic@forum'}
+    let aRecord = {name, email, password: hasPassword, status:email}
     const record = new userModel(aRecord);
    record.save((docs, err)=>{
     if(docs){

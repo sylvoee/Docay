@@ -22,3 +22,19 @@ module.exports = registerPatient = (req, res) =>{
     });    
 
 }
+
+
+// search a patient 
+module.exports = patientSearch =( req, res) =>{
+    const{search} = req.body ;
+    patientRegModel.find({hospitalNo:search}).exec((err, docs)=>{
+     if(docs){
+        res.send(docs);
+     console.log(docs);
+     }
+     if(err){
+     res.send("Error in Querying database");
+     console("Error in Querrying database")
+     }
+    }); 
+}

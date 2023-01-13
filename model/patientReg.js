@@ -12,6 +12,12 @@ const mongoose = require('mongoose');
   maritalStatus: String,
   sex:String,
 
+  user:{
+    ref:'User',
+    type:mongoose.Schema.Types.ObjectId, 
+    unique:true
+},
+
   patientRegImage: String,
   address:String,
   chronicDis :String ,
@@ -20,6 +26,8 @@ const mongoose = require('mongoose');
   createdAt: {type: Date, default: Date.now}
 
 });
+
+
 
 
 
